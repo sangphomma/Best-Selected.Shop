@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import PageTransition from "../../motions/PageTransition";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Todos = () => {
   const API_URL = `${import.meta.env.VITE_API_URL}/api/v1`;
@@ -40,7 +41,9 @@ const Todos = () => {
               className={` relative flex justify-center shadow-md border-1 border-sky-100 items-center bg-yellow-50  overflow-hidden p-0 m-0`}
             >
               <div className="text-4xl flex-1 flex justify-center items-center ">
-                <span>{todo.id}</span>
+                <Link to={`/todos/${todo.id}`}>
+                  <span>{todo.id}</span>
+                </Link>
               </div>
               <div className="flex-1 m-0 p-0">
                 <img

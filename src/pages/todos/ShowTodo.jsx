@@ -37,7 +37,7 @@ const ShowTodo = () => {
   return (
     <PageTransition>
       <div className=" p-2 mx-auto grid grid-cols-1 gap-4 place-content-center ">
-        <div className="flex flex-col place-self-center w-36 shadow-md  bg-slate-100 rounded-md p-2">
+        <div className="flex flex-col place-self-center w-72 shadow-md  bg-slate-100 rounded-md p-2">
           {(() => {
             if (todo.images) {
               return (
